@@ -58,35 +58,69 @@
         <div class="header-block">
             <h1 class="text-white leading-tight py-8">#Description</h1>
         </div>
-        <div class="content-container flex">
-            <div class="w-3/12 m-8 overflow-hidden round-lg side-bar">
-                <div class="side-block overflow-hidden">
-                    <h3 class="text-white text-xl p-4 font-bold leading-tight">Find the right city for you!</h3>
-                    <div class="search-input p-8">
-                        <form id="city-search">
-                            <label value="city-label" class="block text-gray-700 text-xl font-bold mb-2">Enter Your
-                                Location:</label>
-                            <input type="text" id="city-input"
-                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                placeholder="Enter City">
-                            <input type="submit" id="city-submit"
-                                class="text-white font-bold py-2 px-4 rounded mx-auto block mt-4 w-full uppercase formBtn"
-                                placeholder="Submit" value="Submit">
-                        </form>
-                    </div>
-                    <div class="category-buttons">
-                        <button id=livingCost class=placesCategory>Cost of Living</button><br></br>
-                        <button id=housingMrkt class=placesCategory>Housing Market</button><br></br>
-                        <button id=schoolDist class=placesCategory>School District</button><br></br>
-                        <button id=weatherForcast class=placesCategory>Weather Forcast</button>
+
+
+        <div class="row">
+            <div class="flex">
+                <div class="w-2/6">
+                    <!-- Left Container For Search inputs -->
+                    <div class="content-container flex">
+                        <div class="m-8 overflow-hidden round-lg">
+                            <div class="flex-block overflow-hidden">
+                                <h3 class="text-white text-xl p-4 font-bold leading-tight">Find the right city for you!
+                                </h3>
+                                <div class="search-input p-8">
+                                    <form id="city-search">
+                                        <label value="city-label"
+                                            class="block text-gray-700 text-xl font-bold mb-2">Enter
+                                            Your
+                                            Location:</label>
+                                        <input type="text" id="city-input"
+                                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                            placeholder="Enter City">
+                                        <input type="submit" id="city-submit"
+                                            class="text-white font-bold py-2 px-4 rounded mx-auto block mt-4 w-full uppercase formBtn"
+                                            placeholder="Submit" value="Submit">
+                                    </form>
+                                </div>
+                                <div class="category-buttons">
+                                    <button id=livingCost
+                                        class="text-gray-800 py-2 px-4 rounded mx-auto block mt-4 w-full uppercase">Cost
+                                        of Living</button>
+                                    <button id=housingMrkt
+                                        class="text-gray-800 py-2 px-4 rounded mx-auto block mt-4 w-full uppercase">Housing
+                                        Market</button>
+                                    <button id=schoolDist
+                                        class="text-gray-800 py-2 px-4 rounded mx-auto block mt-4 w-full uppercase">School
+                                        District</button>
+                                    <button id=weatherForcast
+                                        class="text-gray-800 py-2 px-4 rounded mx-auto block mt-4 w-full uppercase">Weather
+                                        Forcast</button>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="results-block w-9/12 m-8">
+            <!-- Center Flex -->
+            <div class="w-4/6">
+                <div class="content-container flex">
+                    <div class="m-8 overflow-hidden round-lg">
+                        <div class="flex-block overflow-hidden">
+                            <h3 class="text-white text-xl p-4 font-bold ">Map</h3>
+                            <div class="search-input p-8">
+                                Google Map
+                            </div>
 
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
+
 
 
     <script src="Assets/tailwind.js"></script>

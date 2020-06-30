@@ -52,3 +52,10 @@ h3 {
 /* .map-container {
   float: right;
 } */
+#map {
+	height: 60%;
+	background-color: aqua;
+	width: 400px;
+	height: 400px;
+}
+

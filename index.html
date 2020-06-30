@@ -2,11 +2,16 @@
 <html lang="en">
 
 <head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movin' On Up</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="./Assets/style.css" rel="stylesheet">
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAh1rBDjDcIzVuZKrhTN7zchDGaRkpLt3s&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
 </head>
 
 <body>
@@ -19,8 +24,8 @@
             <span class="font-semibold text-5xl tracking-tight">Movin' On Up</span>
         </div>
 
-        <a href="#"
-            class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Search</a>
+       <!--<a href="#"
+            class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Search</a> --> 
         </div>
         </div>
     </nav>
@@ -43,16 +48,16 @@
                         <h3 class="text-white text-xl p-4 font-bold leading-tight">Find the right city for you!
                         </h3>
                         <div class="search-input p-8">
-                            <form id="city-search">
+                            <form id="city-search" onsubmit="submitFunction()">
                                 <label value="city-label" class="block text-gray-700 text-xl font-bold mb-2">Enter
                                     Your
                                     Location:</label>
-                                <input type="text" id="city-input"
+                                <input type="text" id="city-input" placeholder="City, st"
                                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    placeholder="Enter City">
+                                    placeholder="Enter City" >
                                 <input type="submit" id="city-submit"
                                     class="text-white font-bold py-2 px-4 rounded mx-auto block mt-4 w-full uppercase formBtn"
-                                    placeholder="Submit" value="Submit">
+                                    placeholder="Submit" value="Submit" >
                             </form>
                         </div>
                         <div class="category-buttons">
@@ -75,14 +80,27 @@
             </div>
 
 
-            <!-- Center Data Flex -->
+            <!-- Data Box for Apartments -->
 
             <div class="map-container flex">
                 <div class="m-8 overflow-hidden round-lg">
                     <div class="flex-block overflow-hidden">
-                        <h3 class="text-white text-xl p-4 font-bold leading-tight">DATA</h3>
-                        <div class="search-input p-8">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, dolores.
+                        <h3 class="text-white text-xl p-4 font-bold leading-tight">Affordable Apartments</h3>
+                        <div id="content" class="search-input p-8">
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Box for schools-->
+            <div class="map-container flex">
+                <div class="m-8 overflow-hidden round-lg">
+                    <div class="flex-block overflow-hidden">
+                        <h3 class="text-white text-xl p-4 font-bold leading-tight">Local Schools</h3>
+                        <div id="content1" class="search-input p-8">
+                            
                         </div>
 
                     </div>
@@ -94,8 +112,8 @@
                 <div class="m-8 overflow-hidden round-lg">
                     <div class="flex-block overflow-hidden">
                         <h3 class="text-white text-xl p-4 font-bold leading-tight">Map</h3>
-                        <div class="search-input p-8">
-                            Google Map
+                        <div id="map"  >
+                            
                         </div>
 
                     </div>
@@ -107,8 +125,10 @@
     </div>
 
 
-
-    <script src="Assets/tailwind.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="Assets/tailwind.js"></script> -->
+     <script src="Assets/script.js"></script>
+    
 </body>
 
 </html>

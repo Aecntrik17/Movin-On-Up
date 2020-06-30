@@ -8,47 +8,58 @@
 } */
 
 body {
-  background-image: url("./kruse-collins-4sgI770L6uo-unsplash.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100%;
-  background-position: center;
-  margin: 0;
-  padding: 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-repeat: no-repeat;
+	background-image: url("./kruse-collins-4sgI770L6uo-unsplash.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100%;
+	background-position: center;
+	margin: 0;
+	padding: 0;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	background-repeat: no-repeat;
 }
 
 .header-block {
-  width: 100%;
-  background: linear-gradient(#000, rgba(0, 0, 0, 0.3) 50%, transparent 80%);
+	width: 100%;
+	background: linear-gradient(#000, rgba(0, 0, 0, 0.3) 50%, transparent 80%);
 }
 
 .header-block h1 {
-  text-align: left;
-  color: #fff;
-  padding: 20px 30px;
-  font-weight: bold;
-  font-size: 44px;
-  max-width: 1200px;
-  margin: auto;
-  text-transform: uppercase;
+	text-align: left;
+	color: #fff;
+	padding: 20px 30px;
+	font-weight: bold;
+	font-size: 44px;
+	max-width: 1200px;
+	margin: auto;
+	text-transform: uppercase;
 }
 
 .flex-block {
-  background: rgba(255, 255, 255, 0.74);
-  border-radius: 35px;
+	background: rgba(255, 255, 255, 0.74);
+	border-radius: 35px;
 }
 
 .formBtn {
-  background-color: rgba(33, 193, 193);
+	background-color: rgba(33, 193, 193);
 }
 
 h3 {
-  text-align: center;
-  text-transform: uppercase;
-  background-color: rgba(33, 193, 193);
+	text-align: center;
+	text-transform: uppercase;
+	background-color: rgba(33, 193, 193);
 }
 /* .map-container {
   float: right;
 } */
+#map {
+	height: 60%;
+	background-color: aqua;
+	width: 400px;
+	height: 300px;
+}
+
+#content #content1 {
+	min-width: 400px;
+	min-height: 300px;
+}

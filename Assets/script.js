@@ -65,10 +65,8 @@ function displayCityInfo(event) {
       // retrieve results for current UV-Index and append to the appropriate div
       $("#uvi").html(weatherResponse.current.uvi);
 
-      // converting UNIX code to moment format display
-      var UNIX_timestamp = weatherResponse.current.dt;
-      function timeConverter(UNIX_timestamp) {
-        var a = new Date(UNIX_timestamp * 1000);
+      function timeConverter(timestamp, option) {
+        var a = new Date(timestamp * 1000);
         var months = [
           "Jan",
           "Feb",
@@ -87,15 +85,43 @@ function displayCityInfo(event) {
         var month = months[a.getMonth()];
         var date = a.getDate();
         var hour = a.getHours();
-        var min = a.getMinutes();
-        var time = date + " " + month + " " + year;
-        return time;
-        var sunrise = hour + " " + min;
-      }
-      let sunrise = timeConverter(weatherResponse.current.sunrise);
-      console.log(sunrise);
+        var min = a.getMinutes().toString();
+        min = min.padStart(2, "0");
+        const formatDate = date + " " + month + " " + year;
+        const formatTime = hour + ":" + min;
 
-      let sunset = timeConverter(weatherResponse.current.sunset);
+        console.log(typeof formatTime);
+        if (option === "time") {
+          return formatTime;
+        }
+        if (option === "date") {
+          return formatDate;
+        }
+
+        return {
+          date: formatDate,
+          time: formatTime,
+        };
+      }
+      console.log(timeConverter(weatherResponse.current.sunrise, "time"));
+      console.log(timeConverter(weatherResponse.current.sunset, "time"));
+
+      var newDiv = $("<div>");
+      newDiv.addClass("card border-primary mb-3" style="max-width: 18rem;");
+      var newHeader = $("<div>");
+      newHeader.addClass("card-header");
+      var newBody = $("<div>");
+      newBody.addClass("card-body text-primary");
+      var newTitle = $("<h5>");
+      newTitle.addClass("card-title");
+      var newText = $("<p>");
+      newTitle.addClass("card-text");
+
+      // creating new card to hold weather data
+      newDiv.append(newHeader);
+      newDiv.append(newBody);
+      newBody.append(newTitle);
+      newBody.append(newText);
     });
   });
 }

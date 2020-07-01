@@ -2,7 +2,9 @@ var NowMoment = moment();
 var currentDate = NowMoment.format(" M / D / YYYY ");
 //api key for google maps
 var apikeygoogle = "AIzaSyCUhLVjRWl_hRcOuGutBWR_QwLWLQJWaSA";
-
+$("#apartment").hide();
+$("#school").hide();
+$("#weatherDiv").hide();
 //api key for both mapquest apis
 var apikeymapquest = "wkAXQtPfXHFVQVVsUyUHn1VONKEaiGuR";
 //should be directed to user input once merged

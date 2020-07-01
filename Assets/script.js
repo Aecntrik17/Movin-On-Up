@@ -38,8 +38,7 @@ function submitFunction() {
       method: "GET",
     }).then(function (weatherResponse) {
       console.log(weatherResponse);
-      let htmlWeather = $("#weather");
-      let htmlWeatherContent = "";
+      $("#weather").html("");
 
       let icon = weatherResponse.current.weather[0].icon;
       // converting the data for ICON to an image

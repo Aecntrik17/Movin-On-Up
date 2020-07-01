@@ -201,3 +201,27 @@ let lng = -78.943908;
 
   exports.initMap = initMap;
 })((this.window = this.window || {}));
+
+$("#housingMrkt").on("click", displayHousing);
+function displayHousing(event) {
+  event.preventDefault();
+  $("#apartment").show();
+  $("#weatherDiv").hide();
+  $("#school").hide();
+}
+
+$("#schoolDist").on("click", displaySchools);
+function displaySchools(event) {
+  event.preventDefault();
+  $("#school").show();
+  $("#weatherDiv").hide();
+  $("#apartment").hide();
+}
+
+$("#weatherForecast").on("click", displayWeather);
+function displayWeather(event) {
+  event.preventDefault();
+  $("#weatherDiv").show();
+  $("#school").hide();
+  $("#apartment").hide();
+}

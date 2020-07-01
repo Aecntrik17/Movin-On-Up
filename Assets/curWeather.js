@@ -1,7 +1,7 @@
 var NowMoment = moment();
 var currentDate = NowMoment.format(" M / D / YYYY ");
 
-function submitFunction() {
+function submitFunction1() {
   event.preventDefault();
   let city = document.getElementById("city-input").value;
 

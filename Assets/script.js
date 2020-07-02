@@ -1,14 +1,17 @@
+//Time variables
 var NowMoment = moment();
 var currentDate = NowMoment.format(' M / D / YYYY ');
-//api key for google maps
+
+//Api key for google maps
 var apikeygoogle = 'AIzaSyCUhLVjRWl_hRcOuGutBWR_QwLWLQJWaSA';
 $('#apartment').hide();
 $('#school').hide();
 $('#weatherDiv').hide();
-//api key for both mapquest apis
-var apikeymapquest = 'wkAXQtPfXHFVQVVsUyUHn1VONKEaiGuR';
-//should be directed to user input once merged
 
+//Api key for both mapquest apis
+var apikeymapquest = 'wkAXQtPfXHFVQVVsUyUHn1VONKEaiGuR';
+
+// function that runs once submit button is engaged
 function submitFunction() {
 	event.preventDefault();
 	let city = document.getElementById('city-input').value;
@@ -36,8 +39,8 @@ function submitFunction() {
 			let icon = weatherResponse.current.weather[0].icon;
 			// converting the data for ICON to an image
 			let iconIMG = '<img src=http://openweathermap.org/img/w/' + icon + '.png>';
-			// retrieve results for City, current date and icon append to the appropriate div
 
+			// retrieve results for City, current date and icon append to the appropriate div
 			let nameDateIcon = $('<div>').html(response.city.name + currentDate + iconIMG);
 			$('#weather').append(nameDateIcon);
 
@@ -89,7 +92,8 @@ function submitFunction() {
 			$('#weather').append(sunsetDiv);
 		});
 	});
-	// ajax request from mapquest for list of apartments in the search area  *** not finished ***
+
+	// ajax request from mapquest for list of apartments in the search area
 	$.ajax({
 		url:
 			'https://www.mapquestapi.com/search/v2/radius?origin=' +
@@ -122,7 +126,6 @@ function submitFunction() {
 			apikeymapquest,
 		method: 'GET'
 	}).then(function(response) {
-		// list top 3 schools
 		let htmlbox = document.getElementById('content1');
 		let htmlBoxContent = '';
 
@@ -147,7 +150,7 @@ function submitFunction() {
 	});
 }
 
-// initial geo location for map
+// initial geo location for map (Durham)
 
 let lat = 36.008727;
 let lng = -78.943908;
@@ -193,5 +196,3 @@ function displayWeather(event) {
 	$('#school').hide();
 	$('#apartment').hide();
 }
-
-

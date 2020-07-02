@@ -25,3 +25,8 @@ Initially we wanted to include median income or cost of living data but the apiâ
 <h3>Directions for Future Development</h3>
 As we mentioned earlier, we would like to incorporate cost of living data and weather to the app. Our team will continue to research available APIâ€™s to partner with that will allow this software to be even more powerful. 
 
+<h2>DEMO</h2>
+
+https://matthew-neal.github.io/Movin-On-Up/
+
+![Movin-On-Up](./Assets/Demo.gif)
